@@ -7,7 +7,6 @@
     <tr>
       <th>Transaction name</th>
       <th>Transaction amount</th>
-      <th>Total</th>
       <th colspan="3"></th>
     </tr>
   </thead>
@@ -17,7 +16,6 @@
       <tr>
         <td><%= bank_register.transaction_name %></td>
         <td><%= bank_register.transaction_amount %></td>
-        <td><%= bank_register.total %></td>
         <td><%= link_to 'Show', bank_register %></td>
         <td><%= link_to 'Edit', edit_bank_register_path(bank_register) %></td>
         <td><%= link_to 'Destroy', bank_register, method: :delete, data: { confirm: 'Are you sure?' } %></td>
@@ -29,3 +27,5 @@
 <br>
 
 <%= link_to 'New Bank register', new_bank_register_path %>
+
+<p>Total balance:<%= @total %></p>

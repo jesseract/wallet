@@ -5,6 +5,7 @@ class BankRegistersController < ApplicationController
   # GET /bank_registers.json
   def index
     @bank_registers = BankRegister.all
+    @total = BankRegister.balance
   end
 
   # GET /bank_registers/1

@@ -11,12 +11,11 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150128182136) do
+ActiveRecord::Schema.define(version: 20150128191313) do
 
   create_table "bank_registers", force: :cascade do |t|
     t.string   "transaction_name"
     t.float    "transaction_amount"
-    t.float    "total"
     t.datetime "created_at",         null: false
     t.datetime "updated_at",         null: false
   end
