@@ -5,7 +5,11 @@ class BankRegistersController < ApplicationController
   # GET /bank_registers.json
   def index
     @bank_registers = BankRegister.all
-    @total = BankRegister.balance
+    @total = BankRegister.balance.to_f
+     if @total <= 0
+       @chastise = "WARNING: Your balance is negative!"
+     end
+    #  total_balance = @transaction_name.reduce(0) {|sum, i| sum + i.transaction_amount}
   end
 
   # GET /bank_registers/1
